@@ -1,0 +1,25 @@
+<ion-content [fullscreen]="true">
+  <ion-img class="logo" src="../../assets/icons/VetHand-02.svg"></ion-img>
+
+  <ion-row class="mt-5 p-5">
+    <form [formGroup]="loginForm">
+      <ion-col size="12">
+        <label>Telefon Numaran</label>
+        <ion-input type="text" class="inp" placeholder="+90 (5xx xxx xx xx)" formControlName="gsm"></ion-input>
+      </ion-col>
+      <ion-col class="mt-3" size="12">
+        <label>Şifren</label>
+        <ion-input type="password" class="inp" placeholder="xxxxxxxxx" formControlName="password"></ion-input>
+      </ion-col>
+      <ion-col size="12">
+        <ion-button (click)="onClickLogin()" class="submit-btn">Giriş Yap</ion-button>
+      </ion-col>
+      <ion-col class="ion-text-center pwcol" size="12">
+        <label class="f-pw">Şifreni mi unuttun?</label>
+      </ion-col>
+      <ion-col size="12">
+        <ion-button class="fw-btn" (click)="onClickRegister()">Kayıt Ol</ion-button>
+      </ion-col>
+    </form>
+  </ion-row>
+</ion-content>

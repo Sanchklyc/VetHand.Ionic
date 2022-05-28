@@ -1,0 +1,51 @@
+.logo {
+  padding: 0 5% 0 5%;
+  width: 260px;
+  margin: auto;
+  margin-top: 25%;
+}
+.mt-5 {
+  margin-top: 20% !important;
+}
+.p-5 {
+  padding-left: 7.5%;
+  padding-right: 7.5%;
+}
+label {
+  font-size: 15px;
+  font-weight: 500;
+}
+.inp {
+  --background: #f5f6fa;
+  border-radius: 10px;
+  margin-top: 10px;
+  height: 45px;
+  padding-left: 15px !important;
+  --placeholder-color: #d1d6e9;
+  --placeholder-opacity: 1;
+}
+.mt-3 {
+  margin-top: 5%;
+}
+.submit-btn {
+  width: 100% !important;
+  --background: #fd8600;
+  margin-top: 5% !important;
+  font-weight: 300;
+}
+.pwcol {
+  margin-top: 2.5% !important;
+  margin-bottom: 2.5% !important;
+  font-size: 600;
+}
+.f-pw {
+  text-align: center;
+}
+.fw-btn {
+  --background: #583384;
+  width: 100%;
+  font-weight: 300;
+}
+form {
+  display: contents !important;
+}
