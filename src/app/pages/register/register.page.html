@@ -1,0 +1,42 @@
+<ion-content [fullscreen]="true">
+  <ion-row class="mt-1 p-5">
+    <form [formGroup]="registerForm">
+      <ion-col size="12">
+        <ion-icon (click)="goBack()" class="back-icon" name="chevron-back-outline"></ion-icon>
+      </ion-col>
+      <ion-col class="mt-3" size="12">
+        <label>Adın</label>
+        <ion-input formControlName="name" type="text" class="inp" placeholder="Adını gir"></ion-input>
+      </ion-col>
+      <ion-col class="mt-3" size="12">
+        <label>Soyadın</label>
+        <ion-input formControlName="surname" type="text" class="inp" placeholder="Soyadını gir"></ion-input>
+      </ion-col>
+      <ion-col class="mt-3" size="12">
+        <label>E-mail Adresin</label>
+        <ion-input type="text" class="inp" formControlName="email" placeholder="E-mail adresini gir"></ion-input>
+      </ion-col>
+      <ion-col class="mt-3" size="12">
+        <label>Telefon Numaran</label>
+        <ion-input type="tel" class="inp" placeholder="+90 (5xx xxx xxxx)" formControlName="gsm"></ion-input>
+      </ion-col>
+      <ion-col class="mt-3" size="12">
+        <label>Şifreni Belirle <small class="text-gray">(En az 6 haneli)</small></label>
+        <ion-input type="password" class="inp" placeholder="xxxxxx" formControlName="password"></ion-input>
+      </ion-col>
+      <ion-col class="mt-3" size="12">
+        <label>Şifreni Yeniden Gir </label>
+        <ion-input type="password" class="inp" placeholder="xxxxxx" formControlName="passwordConfirm"></ion-input>
+      </ion-col>
+      <ion-col size="12">
+        <ion-button class="submit-btn" (click)="goNext()">Kayıt Ol</ion-button>
+      </ion-col>
+      <ion-col class="ion-text-center pwcol" size="12">
+        <label class="f-pw">Mevcut bir hesabın var mı?</label>
+      </ion-col>
+      <ion-col size="12">
+        <ion-button class="fw-btn" (click)="goBack()">Giriş Yap</ion-button>
+      </ion-col>
+    </form>
+  </ion-row>
+</ion-content>

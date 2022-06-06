@@ -29,11 +29,7 @@ export class Tab1Page {
       allowEditing: false,
       resultType: CameraResultType.DataUrl,
       saveToGallery: false,
-      source: prompt
-        ? CameraSource.Prompt
-        : fromCamera
-        ? CameraSource.Camera
-        : CameraSource.Photos,
+      source: prompt ? CameraSource.Prompt : fromCamera ? CameraSource.Camera : CameraSource.Photos,
     }).then((image) => {
       this.images[this.currentImageIndex] = image.dataUrl;
       this.currentImageIndex++;

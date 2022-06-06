@@ -17,7 +17,7 @@ export class AuthInterceptor implements HttpInterceptor {
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<unknown>> {
     return from(this.handle(request, next)).pipe(
       catchError((err) => {
-        if (err.error.message) {
+        if (err.error && err.error.message) {
           this.toastService.showErrorMessage(err.error.message);
         }
         return throwError(err);

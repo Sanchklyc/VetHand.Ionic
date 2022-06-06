@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth/auth.service';
 import { ToastrService } from 'src/app/services/toastr/toastr.service';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +16,7 @@ export class LoginPage implements OnInit {
     private formBuilder: FormBuilder,
     private toastService: ToastrService,
     private authService: AuthService,
-    private router: Router
+    private navController: NavController
   ) {}
 
   ngOnInit() {
@@ -38,11 +39,13 @@ export class LoginPage implements OnInit {
       if (response.success) {
         await this.authService.setToken(response.data.token);
         this.toastService.showSuccessMessage(response.message);
-        this.router.navigateByUrl('/tabs/tab1');
+        this.navController.navigateRoot('/tabs/tab1');
       } else {
         this.toastService.showErrorMessage(response.message);
       }
     });
   }
-  onClickRegister() {}
+  onClickRegister() {
+    this.navController.navigateForward('register');
+  }
 }
