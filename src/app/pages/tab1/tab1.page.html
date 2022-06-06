@@ -6,69 +6,44 @@
         <div class="information-box orange">
           <h3>BİLGİLENDİRME</h3>
           <ion-label
-            >VetHand, kullanıcılar için tamamen ücretsiz bir uygulamadır. Yardım
-            edilen hayvanın her türlü gideri, bağışçılardan
-            karşılanır.</ion-label
+            >VetHand, kullanıcılar için tamamen ücretsiz bir uygulamadır. Yardım edilen hayvanın her türlü gideri,
+            bağışçılardan karşılanır.</ion-label
           >
         </div>
       </ion-col>
-      <ion-col class="mt-2" size="12">
+      <ion-col size="12" class="mt-2 text-center ion-no-padding ion-no-margin">
+        <p class="text-red">Bu ekran simülasyon veriler ile çalışmaktadır.</p>
+      </ion-col>
+      <ion-col class="" size="12">
         <ion-label>Fotoğraf Seç <small>(En fazla 4 fotoğraf)</small></ion-label>
-        <ion-button
-          *ngIf="!imageUploaded()"
-          (click)="takePicture(false)"
-          class="secondary"
+        <ion-button *ngIf="!imageUploaded()" (click)="takePicture(false)" class="secondary"
           ><ion-icon name="images-outline"></ion-icon>Galeriden Seç</ion-button
         >
-        <ion-button
-          *ngIf="!imageUploaded()"
-          (click)="takePicture(true)"
-          class="secondary"
+        <ion-button *ngIf="!imageUploaded()" (click)="takePicture(true)" class="secondary"
           ><ion-icon name="camera-outline"></ion-icon>Fotoğraf Çek</ion-button
         >
         <ion-row class="img-upload-area" *ngIf="imageUploaded()">
           <ion-col size="6">
             <ion-img [src]="images[0]"></ion-img>
-            <ion-icon
-              *ngIf="imageUploadedTo(0)"
-              name="close-outline"
-              (click)="removeImageAt(0)"
-            ></ion-icon>
+            <ion-icon *ngIf="imageUploadedTo(0)" name="close-outline" (click)="removeImageAt(0)"></ion-icon>
           </ion-col>
           <ion-col size="6">
             <ion-img (click)="takePhoto(1)" [src]="images[1]"></ion-img>
-            <ion-icon
-              *ngIf="imageUploadedTo(1)"
-              name="close-outline"
-              (click)="removeImageAt(1)"
-            ></ion-icon>
+            <ion-icon *ngIf="imageUploadedTo(1)" name="close-outline" (click)="removeImageAt(1)"></ion-icon>
           </ion-col>
           <ion-col size="6">
             <ion-img (click)="takePhoto(2)" [src]="images[2]"></ion-img>
-            <ion-icon
-              *ngIf="imageUploadedTo(2)"
-              (click)="removeImageAt(2)"
-              name="close-outline"
-            ></ion-icon>
+            <ion-icon *ngIf="imageUploadedTo(2)" (click)="removeImageAt(2)" name="close-outline"></ion-icon>
           </ion-col>
           <ion-col size="6">
             <ion-img (click)="takePhoto(3)" [src]="images[3]"></ion-img>
-            <ion-icon
-              *ngIf="imageUploadedTo(3)"
-              (click)="removeImageAt(3)"
-              name="close-outline"
-            ></ion-icon>
+            <ion-icon *ngIf="imageUploadedTo(3)" (click)="removeImageAt(3)" name="close-outline"></ion-icon>
           </ion-col>
         </ion-row>
       </ion-col>
       <ion-col size="12">
-        <ion-label
-          >Açıklama Gir<small> (Adres belirtmene gerek yok)</small></ion-label
-        >
-        <ion-textarea
-          rows="6"
-          placeholder="Durumu özetleyen bir açıklama gir.."
-        ></ion-textarea>
+        <ion-label>Açıklama Gir<small> (Adres belirtmene gerek yok)</small></ion-label>
+        <ion-textarea rows="6" placeholder="Durumu özetleyen bir açıklama gir.."></ion-textarea>
       </ion-col>
       <ion-col size="12">
         <ion-button class="primary">Yardım İste</ion-button>
